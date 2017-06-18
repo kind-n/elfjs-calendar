@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+
+body {
+    margin: 0;
+    font-family: monospace;
+}
+
+.x-container {
+    width: 100vw;
+    max-width: 600px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 2px solid #333;
+    padding: 8px 4px;
+}
+
+.x-container .swiper-slide {
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-calendar {
+    font-size: 0;
+}
+
+.swiper-calendar-lump {
+    font-size: 0;
+    text-align: justify;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.swiper-calendar-lump::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0;
+}
+
+.swiper-calendar-name {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 71.40%;
+}
+.swiper-calendar-name::before {
+    content: "";
+    display: block;
+    margin-top: 16%;
+}
+
+.swiper-calendar-item {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 14.28%;
+}
+.swiper-calendar-item::before {
+    content: "";
+    display: block;
+    margin-top: 80%;
+}
+
+.swiper-calendar-item.none {
+    cursor: default;
+    opacity: 0;
+}
+.swiper-calendar-item.gray {
+    cursor: not-allowed;
+    opacity: .5;
+}
+.swiper-calendar-item.over,
+.swiper-calendar-item.prev,
+.swiper-calendar-item.next,
+.swiper-calendar-item.hand {
+    cursor: pointer;
+}
+
+.swiper-calendar-prev,
+.swiper-calendar-next {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+.swiper-calendar-prev::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: .5em solid transparent;
+    border-bottom: .5em solid transparent;
+    border-right: .67em solid currentColor;
+    margin-left: -.335em;
+    margin-top: -.5em;
+    left: 50%;
+    top: 50%;
+    height: 0;
+    width: 0;
+}
+.swiper-calendar-next::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: .5em solid transparent;
+    border-bottom: .5em solid transparent;
+    border-left: .67em solid currentColor;
+    margin-right: -.335em;
+    margin-top: -.5em;
+    right: 50%;
+    top: 50%;
+    height: 0;
+    width: 0;
+}
+
+.swiper-calendar-text {
+    font-size: 14px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    left: 2px;
+    top: 2px;
+}
+.swiper-calendar-text::after {
+    content: "";
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+    width: 0;
+}
+
+.swiper-calendar-mask {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    left: 2px;
+    top: 2px;
+}
+
+.swiper-calendar-item.over .swiper-calendar-mask {
+    background-color: #83c7cd;
+}
+.swiper-calendar-item.prev .swiper-calendar-mask::before {
+    content: "";
+    display: block;
+    border-top: 1000px solid #83c7cd;
+    border-bottom: 1000px solid #83c7cd;
+    border-left: 760px solid #31a2ac;
+    position: absolute;
+    margin-left: -760px;
+    margin-top: -1000px;
+    left: 100%;
+    top: 50%;
+    height: 0;
+    width: 0;
+}
+.swiper-calendar-item.next .swiper-calendar-mask::before {
+    content: "";
+    display: block;
+    border-top: 1000px solid #83c7cd;
+    border-bottom: 1000px solid #83c7cd;
+    border-right: 760px solid #31a2ac;
+    position: absolute;
+    margin-right: -760px;
+    margin-top: -1000px;
+    right: 100%;
+    top: 50%;
+    height: 0;
+    width: 0;
+}

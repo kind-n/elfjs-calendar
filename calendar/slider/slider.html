@@ -1,0 +1,14 @@
+<div data-value="{{ props.value.toLocaleDateString() }}">
+    <div elf-each="week in date" class="swiper-calendar-lump">
+        <div 
+            elf-each="item in week"
+            class="swiper-calendar-item {{ item.state }}"
+            onclick="onMouseClick(item)"
+            onmouseenter="onMouseEnter(item)"
+            onmouseleave="onMouseLeave(item)"
+        >
+            <div class="swiper-calendar-mask"></div>
+            <div class="swiper-calendar-text">{{ item.value.getDate() }}</div>
+        </div>
+    </div>
+</div>

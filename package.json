@@ -1,0 +1,9 @@
+{
+    "name": "swiper-calendar",
+    "version": "1.0.0",
+    "dependencies": {
+        "elfjs": "^0.0.3",
+        "swiper": "^3.4.2",
+        "moment": "^2.18.1"
+    }
+}
