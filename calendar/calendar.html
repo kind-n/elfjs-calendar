@@ -42,13 +42,13 @@
     <div class="swiper-container" ref="swiper">
         <div class="swiper-wrapper">
             <div elf-when="through >= 1" class="swiper-slide">
-                <slider min={{props.min}} max={{props.max}} prev={{props.prev}} next={{props.next}} value={{prevMonth}}></slider>
+                <slider min="{{props.min}}" max="{{props.max}}" prev="{{props.prev}}" next="{{props.next}}" value="{{prevMonth}}"></slider>
             </div>
             <div elf-when="through >= 2" class="swiper-slide">
-                <slider min={{props.min}} max={{props.max}} prev={{props.prev}} next={{props.next}} value={{leadMonth}}></slider>
+                <slider min="{{props.min}}" max="{{props.max}}" prev="{{props.prev}}" next="{{props.next}}" value="{{leadMonth}}"></slider>
             </div>
             <div elf-when="through >= 3" class="swiper-slide">
-                <slider min={{props.min}} max={{props.max}} prev={{props.prev}} next={{props.next}} value={{nextMonth}}></slider>
+                <slider min="{{props.min}}" max="{{props.max}}" prev="{{props.prev}}" next="{{props.next}}" value="{{nextMonth}}"></slider>
             </div>
         </div>
     </div>
