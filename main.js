@@ -77,6 +77,7 @@ define([
                     if (!(this.prev < this.next)) {
                         this.next = new Date(this.prev.getTime() + this.milli);
                     }
+                    this.phase = !this.phase;
                 }
             } else {
                 if (!(event.value <= this.min)) {
@@ -84,9 +85,9 @@ define([
                     if (!(this.next > this.prev)) {
                         this.prev = new Date(this.next.getTime() - this.milli);
                     }
+                    this.phase = !this.phase;
                 }
             }
-            this.phase = !this.phase;
             this.tPrev = this.prev;
             this.tNext = this.next;
             Elf.dispatchEvent(this, Elf.createEvent("FlushView", true));
