@@ -1,5 +1,5 @@
 {
-    "name": "swiper-calendar",
+    "name": "elf-calendar",
     "version": "1.0.0",
     "dependencies": {
         "elfjs": "^0.0.3",
