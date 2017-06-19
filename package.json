@@ -1,5 +1,5 @@
 {
-    "name": "elf-calendar",
+    "name": "elfjs-calendar",
     "version": "1.0.0",
     "dependencies": {
         "elfjs": "^0.0.3",
