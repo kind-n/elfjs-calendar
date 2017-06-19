@@ -4,6 +4,11 @@
 body {
     margin: 0;
     font-family: monospace;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
 }
 
 .x-container {
