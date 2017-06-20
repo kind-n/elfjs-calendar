@@ -13,12 +13,7 @@ Elf.config({
 });
 
 Elf.require("./main").then(function (Main) {
-    var view = Elf.render(
-        Elf.createElement(Main, {
-            onFlushView : onFlushView
-        }), document.querySelector(".x-container")
+    Elf.render(
+        Elf.createElement(Main), document.querySelector(".x-container"), true
     );
-    function onFlushView () {
-        view.forceUpdate ();
-    }
 });

@@ -90,7 +90,6 @@ define([
             }
             this.tPrev = this.prev;
             this.tNext = this.next;
-            Elf.dispatchEvent(this, Elf.createEvent("FlushView", true));
         },
 
         onItemEnter : function (event) {
@@ -109,13 +108,11 @@ define([
                     }
                 }
             }
-            Elf.dispatchEvent(this, Elf.createEvent("FlushView", true));
         },
 
         onItemLeave : function (event) {
             this.tPrev = this.prev;
             this.tNext = this.next;
-            Elf.dispatchEvent(this, Elf.createEvent("FlushView", true));
         }
     });
 });

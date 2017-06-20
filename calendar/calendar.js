@@ -82,7 +82,7 @@ define([
                     !(this.nowMonth >= this.maxMonth)) {
                     this.swiper.slideTo(1, 0, false);
                 }
-                Elf.dispatchEvent(this, Elf.createEvent("FlushView", true));
+                Elf.forceUpdate(true);
             }
         })
     );
