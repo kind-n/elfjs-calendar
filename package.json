@@ -2,7 +2,7 @@
     "name": "elfjs-calendar",
     "version": "1.0.0",
     "dependencies": {
-        "elfjs": "^0.0.4",
+        "elfjs": "^0.0.5",
         "swiper": "^3.4.2",
         "moment": "^2.18.1"
     }
