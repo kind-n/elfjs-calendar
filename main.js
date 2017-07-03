@@ -4,7 +4,7 @@ define([
 
     return Elf.createClass({
 
-        constructor () {
+        constructor : function () {
             var now    = new Date();
 
             this.min   = new Date(now.getFullYear() + 0, now.getMonth(), now.getDate());
