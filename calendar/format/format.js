@@ -1,13 +1,9 @@
 define([
     "moment"
 ], function(moment) {
-    return Elf.Transform("format")(
-        
-        Elf.createClass({
-
-            transform : function (value, expr) {
-                return moment(value).format(expr);
-            }
-        })
-    );
+    return Elf.Transform("format", {
+        transform : function (value, expr) {
+            return moment(value).format(expr);
+        }
+    });
 });

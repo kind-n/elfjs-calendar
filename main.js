@@ -72,16 +72,16 @@ define([
 
         onItemClick : function (event) {
             if (this.phase) {
-                if (!(event.value >= this.max)) {
-                    this.prev = event.value;
+                if (!(event.detail >= this.max)) {
+                    this.prev = event.detail;
                     if (!(this.prev < this.next)) {
                         this.next = new Date(this.prev.getTime() + this.milli);
                     }
                     this.phase = !this.phase;
                 }
             } else {
-                if (!(event.value <= this.min)) {
-                    this.next = event.value;
+                if (!(event.detail <= this.min)) {
+                    this.next = event.detail;
                     if (!(this.next > this.prev)) {
                         this.prev = new Date(this.next.getTime() - this.milli);
                     }
@@ -94,15 +94,15 @@ define([
 
         onItemEnter : function (event) {
             if (this.phase) {
-                if (!(event.value >= this.max)) {
-                    this.tPrev = event.value;
+                if (!(event.detail >= this.max)) {
+                    this.tPrev = event.detail;
                     if (!(this.tPrev < this.tNext)) {
                         this.tNext = new Date(this.tPrev.getTime() + this.milli);
                     }
                 }
             } else {
-                if (!(event.value <= this.min)) {
-                    this.tNext = event.value;
+                if (!(event.detail <= this.min)) {
+                    this.tNext = event.detail;
                     if (!(this.tNext > this.tPrev)) {
                         this.tPrev = new Date(this.tNext.getTime() - this.milli);
                     }

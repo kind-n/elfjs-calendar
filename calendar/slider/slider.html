@@ -1,7 +1,7 @@
 <div>
-    <div elf-each="week in date" class="swiper-calendar-lump">
+    <div e-for="week in date" class="swiper-calendar-lump">
         <div 
-            elf-each="item in week"
+            e-for="item in week"
             class="swiper-calendar-item {{ item.state }}"
             onclick="onMouseClick(item)"
             onmouseenter="onMouseEnter(item)"

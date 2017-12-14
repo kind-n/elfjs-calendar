@@ -1,4 +1,4 @@
-/// <reference path="./node_modules/elfjs/lib/elf.d.ts" />
+/// <reference path="./node_modules/elfjs/src/elf.d.ts" />
 /// <reference path="./node_modules/moment/moment.d.ts" />
 
 Elf.set("moment", moment);
