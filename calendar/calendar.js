@@ -22,11 +22,7 @@ define([
         },
 
         get prevMonth () {
-            return !(this.nowMonth <= this.minMonth)
-                 ? !(this.nowMonth >= this.maxMonth)
-                 ? plusMonth(this.nowMonth, -1)
-                 : plusMonth(this.nowMonth, -2)
-                 : this.nowMonth;
+            return plusMonth(this.nowMonth, -this.initialSlide);
         },
 
         get leadMonth () {
@@ -39,14 +35,23 @@ define([
 
         get through () {
             return this.minMonth <= this.maxMonth
-                 ? (this.maxMonth.getFullYear() * 12 + this.maxMonth.getMonth())
-                 - (this.minMonth.getFullYear() * 12 + this.minMonth.getMonth())
-                 + 1
-                 : 3;
+                ? Math.min(3,
+                    (this.maxMonth.getFullYear() * 12 + this.maxMonth.getMonth()) -
+                    (this.minMonth.getFullYear() * 12 + this.minMonth.getMonth()) +
+                    1) : 3;
         },
 
         get initialSlide () {
-            return this.nowMonth.getTime() === this.prevMonth.getTime() ? 0 : 1;
+            if (this.swiper) {
+                return this.swiper.activeIndex;
+            }
+            if ((+this.nowMonth) === (+this.minMonth)) {
+                return 0;
+            }
+            if ((+this.nowMonth) === (+this.maxMonth)) {
+                return this.through - 1;
+            }
+            return 1;
         },
 
         onInitial : function () {
